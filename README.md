@@ -73,8 +73,12 @@ notebooks/       treino e avaliação do modelo
 
 ## Como executar
 
+Pré-requisitos: Python 3.12 e Git.
+
+### Linux / macOS
+
 ```bash
-git clone https://github.com/nperesjr/predictive-factory-API
+git clone [link do seu repositório]
 cd predictive-factory-API
 python3 -m venv .venv
 source .venv/bin/activate
@@ -82,9 +86,21 @@ pip install -r requirements.txt
 uvicorn app.main:app --reload
 ```
 
-No Windows, ative o ambiente com `.venv\Scripts\activate`.
+Em distribuições baseadas em Debian/Ubuntu, se a criação do ambiente virtual falhar, instale o módulo com `sudo apt install python3-venv` e repita o comando.
+
+### Windows
+
+```bash
+git clone [link do seu repositório]
+cd predictive-factory-API
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+uvicorn app.main:app --reload
+```
 
 Com o servidor no ar, a documentação interativa fica em http://127.0.0.1:8000/docs
+
 
 ## Documentação da API
 
