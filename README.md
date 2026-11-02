@@ -5,7 +5,7 @@
 
 Olá, muito bom ter você aqui. Gostaria de avisar que os textos encontrados aqui foram estruturados através de IA generativa e revisados por este humano que vos fala e talvez, ele tenha esquecido de uma coisa ou outra. Se esse for o acaso, me avise. 
 
-Obrigadooo 
+E caso você queira muito conhecer o humano, aqui está um vídeo explicativo dele (dele mesmo, sem IA): [link do Google Drive] 
 
 =============================================================
 
@@ -154,10 +154,6 @@ Códigos de status:
 | 400 | temperatura do processo menor ou igual à do ar |
 | 422 | campo com tipo inválido ou fora da faixa permitida |
 | 500 | modelo não carregado ou erro interno |
-
-## Vídeo de apresentação
-
-[link do Google Drive]
 
 ## Melhorias futuras
 
