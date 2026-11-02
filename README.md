@@ -78,7 +78,7 @@ Pré-requisitos: Python 3.12 e Git.
 ### Linux / macOS
 
 ```bash
-git clone [link do seu repositório]
+git clone https://github.com/nperesjr/predictive-factory-API/
 cd predictive-factory-API
 python3 -m venv .venv
 source .venv/bin/activate
@@ -91,7 +91,7 @@ Em distribuições baseadas em Debian/Ubuntu, se a criação do ambiente virtual
 ### Windows
 
 ```bash
-git clone [link do seu repositório]
+git clone https://github.com/nperesjr/predictive-factory-API/
 cd predictive-factory-API
 python -m venv .venv
 .venv\Scripts\activate
