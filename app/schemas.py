@@ -1,7 +1,10 @@
+"""Contratos da API: regras do jogo, o que aceita, o que devolve."""
+
 from typing import Literal
 
 from pydantic import BaseModel, Field
 
+#Campos = Colunas do treino. Pipeline vai buscar por essa UID.
 
 class DadosMaquina(BaseModel):
     tipo: Literal["L", "M", "H"] = Field(
@@ -23,6 +26,8 @@ class DadosMaquina(BaseModel):
         ge=0, le=500, description="Tempo de uso da ferramenta, em minutos"
     )
 
+#Criamos limites para barrar absurdos prevendo possiveis erros inclusive humanos, há uma folga em relação à faixa vista no treino.
+# Regra da temperatura mairo não fica aqui, os campos estão isolados, regra de negócio tratada por trás na rota com 400.
 
 class ResultadoPredicao(BaseModel):
     falha_prevista: int = Field(ge=0, le=1, description="1 = falha prevista, 0 = normal")
