@@ -5,7 +5,7 @@
 
 Olá, muito bom ter você aqui. Gostaria de avisar que os textos encontrados aqui foram estruturados através de IA generativa e revisados por este humano que vos fala e talvez, ele tenha esquecido de uma coisa ou outra. Se esse for o acaso, me avise. 
 
-E caso você queira muito conhecer o humano, aqui está um vídeo explicativo dele (dele mesmo, sem IA): [link do Google Drive] 
+E caso você queira muito conhecer o humano, aqui está um vídeo explicativo dele (dele mesmo, sem IA): [[link do Google Drive](https://drive.google.com/file/d/1kuxgvCiKKDCjx7mdTX4pMN8S0NteKH9i/view?usp=sharing)] 
 
 =============================================================
 
