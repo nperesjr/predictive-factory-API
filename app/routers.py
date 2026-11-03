@@ -1,3 +1,5 @@
+"""Rotas: recebem e aplicam regras. Chamam o serviço. Não usam a lógica de ML. Tem sinergia, mas independentes."""
+
 from fastapi import APIRouter, HTTPException, Request
 
 from app.schemas import DadosMaquina, ResultadoPredicao, StatusSaude
@@ -5,7 +7,7 @@ from app.services import prever
 
 router = APIRouter()
 
-
+# Responde 200 sempre que o serviço está on
 @router.get("/health", response_model=StatusSaude, tags=["Monitoramento"])
 def health(request: Request):
     modelo_carregado = request.app.state.modelo is not None
@@ -14,12 +16,12 @@ def health(request: Request):
         modelo_carregado=modelo_carregado,
     )
 
-
+#Se o JSON não respeita, dá 422, a previsão é um calculo e o fastAPI executa separado e atende as demais requisições.
 @router.post("/predict", response_model=ResultadoPredicao, tags=["Predição"])
 def predict(dados: DadosMaquina, request: Request):
     modelo = request.app.state.modelo
 
-    if modelo is None:
+    if modelo is None: #sem modelo, o erro é daqui, não do usuário.
         raise HTTPException(
             status_code=500,
             detail="Modelo não está carregado. Tente novamente mais tarde.",
